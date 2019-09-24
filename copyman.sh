@@ -7,14 +7,14 @@
 
 day=$(date +\%Y-\%m-\%d)
 BACKUP_DIR=/root/dbbkp
-bankname=rioaccounts
+bankname=$$$$$$$
 #creating tar.gz
 
 cd $BACKUP_DIR
 tar -czf $bankname$day.tar.gz $day
 
 #copying to cloud
-/root/google-cloud-sdk/bin/gsutil cp $bankname$day.tar.gz gs://datamis
+/root/google-cloud-sdk/bin/gsutil cp $bankname$day.tar.gz gs://$$$$$$
 
 #deleting backups older than 5 days
 find $BACKUP_DIR -daystart -mtime +5 -exec rm {} \;
